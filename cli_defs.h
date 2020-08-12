@@ -1,6 +1,7 @@
 #ifndef _CLI_DEFS_H_
 #define _CLI_DEFS_H_
 
+#include <stdint.h>
 #include <stddef.h>
 
 #define MAX_BUF_SIZE        128     /* Maximum size of CLI Rx buffer */ 
@@ -37,6 +38,12 @@ typedef struct
 typedef struct
 {    
     println_func_ptr_t println; /* Function pointer to user defined println function.      */
+		println_func_ptr_t print; 	/* Function pointer to user defined print function.      */
+		uint8_t sequence;
+		uint8_t prev_index;
+		uint8_t tab_index;
+		char sequence_char;
+		char prev_char;
     cmd_t *cmd_tbl;             /* Pointer to series of commands which are to be accepted. */
     size_t cmd_cnt;             /* Number of commands in cmd_tbl.                          */
 } cli_t;
