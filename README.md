@@ -7,10 +7,11 @@ This useful tool allows a user to remotely invoke functions on their device by s
 * Ability to process function parameters.
 * Statically allocated memory.
 * Backspace to remove unintentional keypresses.
+* TAB for auto completion or cycling through command list 
 
 ## Introduction
 This package contains files to implement a simple command-line interface.
-The package includes cli.h, and cli.c.
+The package includes cli_defs.h, cli.h, and cli.c. 
 
 ## Integration details
 * Integrate cli.h and cli.c files into your project.
